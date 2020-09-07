@@ -1,1 +1,5 @@
+*/.env.localhost
+*/.env.staging
+*/.env.production
+
 .env
