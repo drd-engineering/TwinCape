@@ -3,3 +3,5 @@
 */.env.production
 
 .env
+
+cover.out
