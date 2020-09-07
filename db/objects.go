@@ -6,7 +6,7 @@ import (
 
 // User is db definition of a user in SSO System
 type User struct {
-	ID           string
+	ID           string `gorm:"primary_key"`
 	CreatedAt    time.Time
 	UpdatedAt    time.Time
 	DeletedAt    *time.Time

@@ -45,12 +45,12 @@ func SaveUser(c *gin.Context) {
 	var err error
 	if len(input.DateOfBirth) != 0 {
 		userBirthDate, err = time.Parse("2006-01-02", input.DateOfBirth)
-		if err != nil {
-			c.Abort()
-			c.JSON(http.StatusBadRequest,
-				gin.H{"message": "Date of birth format: (YYYY-MM-DD"})
-			return
-		}
+	}
+	if err != nil {
+		c.Abort()
+		c.JSON(http.StatusBadRequest,
+			gin.H{"message": "Date of birth format: (YYYY-MM-DD"})
+		return
 	}
 	passwordUser := <-strChan
 	go secureUserPassword(passwordUser, strChan, errChan)

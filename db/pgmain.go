@@ -2,15 +2,12 @@ package db
 
 import (
 	"fmt"
-	"sync"
 
 	"github.com/jinzhu/gorm"
-
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
 var db *gorm.DB //database
-var once sync.Once
 
 // Config is db Config for db initiation
 type Config struct {
