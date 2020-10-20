@@ -1,1 +1,7 @@
+*/.env.localhost
+*/.env.staging
+*/.env.production
+
 .env
+
+cover.out
